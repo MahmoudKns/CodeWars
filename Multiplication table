@@ -1,0 +1,11 @@
+multiplicationTable = function(size) {
+let parent = [];
+for (let i = 1; i <= size; ++i) {
+	let child = [];
+	for (let j = 1; j <= size; ++j) {
+		child.push(j * i);
+	}
+	parent.push(child);
+}
+  return parent;
+}
