@@ -1,0 +1,19 @@
+function createPhoneNumber(numbers){
+  return `(${sliceJoin(numbers, 0, 3)}) ${sliceJoin(numbers, 3, 6)}-${sliceJoin(numbers, 6, numbers.length)}`
+}
+
+const sliceJoin = (numbers, start, end) => {
+  return numbers.slice(start, end).join("");
+}
+
+// not mine
+// function createPhoneNumber(numbers){
+//   var format = "(xxx) xxx-xxxx";
+  
+//   for(var i = 0; i < numbers.length; i++)
+//   {
+//     format = format.replace('x', numbers[i]);
+//   }
+  
+//   return format;
+// }
