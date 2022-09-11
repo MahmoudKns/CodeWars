@@ -1,0 +1,25 @@
+function arrayDiff(a, b) {
+  if(b.length == 0) return a;
+  if(a.length == 0) return [];
+  return subtract(a, b);
+}
+function subtract(arrA, arrB) {
+    if(arrB.length == 0) return arrA;
+    return subtract(arrA.filter(a => a != arrB[0]), arrB.splice(1));
+ }
+ 
+ 
+ // not my solutions 
+ 
+ function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
+
+function array_diff(a, b) {
+  return a.filter(function(x) { return b.indexOf(x) == -1; });
+}
+
+function array_diff(a, b) {
+  b = new Set(b)
+  return a.filter(v => !b.has(v))
+}
